@@ -7,6 +7,11 @@
 #   - mac,
 #   - and windows (presuming a sane bash environment; msysgit recommended).
 #
+#  The go toolchain we downlaod for your system will be placed in `$PWD/.go/`.
+#
+#  $GOPATH will be set to `$PWD/.gopath/`, which means your whole workspace is in the current directory.
+#  Thus, if someone goes wrong, you can just throw it all away and start over.
+#
 set -e
 
 if [ ! -d go ]; then
