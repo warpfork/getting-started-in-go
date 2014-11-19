@@ -41,7 +41,7 @@ export GOPATH="$PWD/.gopath"
 export GOROOT="$PWD/.go"
 export PATH="$PWD/.go/bin:$PATH"
 echo "everything is ready!"
-echo go command located at "`which go`"
+echo go command located at "\`which go\`"
 go version
 EOF
 )
