@@ -34,6 +34,14 @@ To run it, just...
 That "hello" file is a statically-linked fully self-contained webserver!
 You can bring it anywhere.  There's no runtime; nothing else to install; just that file.
 
+Here are some other interesting commands you can run:
+
+`go fmt` <- formats all your go code in this directory.
+
+`go test` <- runs your tests
+
+`go test -v` <- runs your tests, and outputs progress and log statements
+
 
 
 Resources
