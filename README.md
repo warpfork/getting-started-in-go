@@ -49,7 +49,7 @@ Resources
 
 http://golang.org/pkg/      <-   API documentation for the standard library
 
-http://golang.org/cmd/go/   <-   `go` tool command documentation
+http://golang.org/cmd/go/   <-   Documentation for the `go` command (`go build`, `go test`, `go get`, etc)
 
 http://golang.org/ref/spec  <-   The full syntax specification (very readable)
 
