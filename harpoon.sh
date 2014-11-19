@@ -14,7 +14,7 @@
 #
 set -e
 
-if [ ! -d go ]; then
+if [ ! -d .go ]; then
 	# detect system
 	go_Version="1.4beta1"
 	os="$(uname -s | tr 'A-Z' 'a-z')"
@@ -23,12 +23,13 @@ if [ ! -d go ]; then
 
 	# fetch go toolchain
 	echo "fetching go toolchain..." >&2
-	curl -o go.tar.gz "https://storage.googleapis.com/golang/go${go_Version}.${os}-${arch}${xtra}.tar.gz" || \
-	wget -O go.tar.gz "https://storage.googleapis.com/golang/go${go_Version}.${os}-${arch}${xtra}.tar.gz"
+	curl -o .go.tar.gz "https://storage.googleapis.com/golang/go${go_Version}.${os}-${arch}${xtra}.tar.gz" || \
+	wget -O .go.tar.gz "https://storage.googleapis.com/golang/go${go_Version}.${os}-${arch}${xtra}.tar.gz"
 
 	# unpack
 	echo "unpacking..." >&2
-	tar xzf go.tar.gz
+	tar xzf .go.tar.gz
+	mv go .go
 fi
 
 # become as a gopher
@@ -37,8 +38,8 @@ exec bash --init-file <(
 cat << EOF
 . ~/.bashrc
 export GOPATH="$PWD/.gopath"
-export GOROOT="$PWD/go"
-export PATH="$PWD/go/bin:$PATH"
+export GOROOT="$PWD/.go"
+export PATH="$PWD/.go/bin:$PATH"
 echo "everything is ready!"
 EOF
 )
