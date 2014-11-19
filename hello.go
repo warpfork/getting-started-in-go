@@ -2,8 +2,8 @@ package main
 
 import (
 	"io"
-	"net/http"
 	"log"
+	"net/http"
 )
 
 // hello world, the web server
