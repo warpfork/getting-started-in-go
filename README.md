@@ -18,6 +18,24 @@ Try running `go version`.
 
 
 
+Building & Running the Hello World
+----------------------------------
+
+We've included an example snippet that runs a tiny webserver!
+
+To build it, run:
+
+`go build hello.go`
+
+To run it, just...
+
+`./hello`
+
+That "hello" file is a statically-linked fully self-contained webserver!
+You can bring it anywhere.  There's no runtime; nothing else to install; just that file.
+
+
+
 Resources
 ---------
 
